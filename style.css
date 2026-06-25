@@ -211,11 +211,10 @@ header .navbar{
 
 .about-section .about-details .section-title{
     padding:0;
-
 }
 
 .about-section .about-details{
-    max-width: 50px;
+    max-width: 550px;
 }
 
 .about-section .about-details .text{
@@ -241,6 +240,59 @@ header .navbar{
 .about-section .social-link-list .social-link:hover{
     color:var(--secondary_color);
 
+}
+
+.menu-section{
+    color: var(--white_color);
+    background: var(--dark_color);
+    padding: 50px 0 100px;
+
+}
+
+.menu-section .menu-list{
+    display:flex;
+    flex-wrap: wrap;
+    gap:110px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.menu-section .menu-list .menu-item {
+    display:flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.menu-section .menu-list .menu-item .menu-image{
+    max-width: 83%;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.menu-section .menu-list .menu-item .name{
+    margin: 12px 0;
+    font-size: var(--font_size_l);
+    font-weight: var(--font_weight_semibold);
+}
+
+.menu-section .menu-list .menu-item .text{
+    font-size: var(--font_size_m);
+
+}
+
+@media screen and (max-width:1024px){
+    .menu-section .menu-list{
+        gap:60px;
+    }
+
+    .menu-section .menu-list .menu-item{
+        width: calc(100% / 3 - 60px);
+    }
 }
 
 @media screen and (max-width:900px){
@@ -336,4 +388,26 @@ header .navbar{
         aspect-ratio:1 ;
     }
 
+    .menu-section .menu-list{
+        gap:30px;
+    }
+
+    .menu-section .menu-list .menu-item{
+        width: calc(100% / 2 - 30px);
+    }
+
+    .menu-section .menu-list .menu-item .menu-image{
+        max-width: 200px;
+    }
+
+}
+
+@media screen and (max-width: 640px){
+    .menu-section .menu-list{
+        gap:60px;
+    }
+
+    .menu-section .menu-list .menu-item{
+        width: 100%;
+    }
 }
